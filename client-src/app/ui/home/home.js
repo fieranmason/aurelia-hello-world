@@ -1,7 +1,10 @@
+import {Calculator} from './calculator'
+
 export class Home
-{ 
+{
     constructor()
     {
-        this.message = "Hello from Aurelia!";
+        this.title = "Overengineered Calculator";
+	       this.calculator = new Calculator();
     }
 }

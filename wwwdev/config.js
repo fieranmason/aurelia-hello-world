@@ -7,449 +7,288 @@ System.config({
     "npm:*": "jspm_packages/npm/*"
   },
   bundles: {
-    "all.js": [
-      "app/ui/home/home.html!github:systemjs/plugin-text@0.0.4",
-      "app/ui/home/home.js",
-      "app/main.js",
+    "aurelia.js": [
       "github:systemjs/plugin-text@0.0.4",
       "github:systemjs/plugin-text@0.0.4/text",
-      "npm:aurelia-templating-binding@1.0.0-beta.1.0.2",
-      "npm:aurelia-templating-binding@1.0.0-beta.1.0.2/aurelia-templating-binding",
-      "npm:aurelia-logging@1.0.0-beta.1",
-      "npm:aurelia-binding@1.0.0-beta.1.0.5",
-      "npm:aurelia-templating@1.0.0-beta.1.0.3",
-      "npm:aurelia-logging@1.0.0-beta.1/aurelia-logging",
-      "npm:aurelia-binding@1.0.0-beta.1.0.5/aurelia-binding",
-      "npm:aurelia-templating@1.0.0-beta.1.0.3/aurelia-templating",
-      "npm:core-js@1.2.6",
-      "npm:aurelia-pal@1.0.0-beta.1.0.2",
-      "npm:aurelia-task-queue@1.0.0-beta.1.0.1",
-      "npm:aurelia-metadata@1.0.0-beta.1",
-      "npm:aurelia-path@1.0.0-beta.1",
-      "npm:aurelia-loader@1.0.0-beta.1.0.1",
-      "npm:aurelia-dependency-injection@1.0.0-beta.1.0.1",
-      "npm:core-js@1.2.6/index",
-      "npm:aurelia-pal@1.0.0-beta.1.0.2/aurelia-pal",
-      "npm:aurelia-task-queue@1.0.0-beta.1.0.1/aurelia-task-queue",
-      "npm:aurelia-metadata@1.0.0-beta.1/aurelia-metadata",
-      "npm:aurelia-path@1.0.0-beta.1/aurelia-path",
-      "npm:aurelia-loader@1.0.0-beta.1.0.1/aurelia-loader",
-      "npm:aurelia-dependency-injection@1.0.0-beta.1.0.1/aurelia-dependency-injection",
-      "npm:core-js@1.2.6/shim",
-      "npm:core-js@1.2.6/modules/core.dict",
-      "npm:core-js@1.2.6/modules/core.get-iterator-method",
-      "npm:core-js@1.2.6/modules/core.get-iterator",
-      "npm:core-js@1.2.6/modules/core.is-iterable",
-      "npm:core-js@1.2.6/modules/core.delay",
-      "npm:core-js@1.2.6/modules/core.function.part",
-      "npm:core-js@1.2.6/modules/core.object.is-object",
-      "npm:core-js@1.2.6/modules/core.object.classof",
-      "npm:core-js@1.2.6/modules/core.object.define",
-      "npm:core-js@1.2.6/modules/core.object.make",
-      "npm:core-js@1.2.6/modules/core.number.iterator",
-      "npm:core-js@1.2.6/modules/core.string.escape-html",
-      "npm:core-js@1.2.6/modules/core.string.unescape-html",
-      "npm:core-js@1.2.6/modules/core.log",
-      "npm:core-js@1.2.6/modules/$.core",
-      "npm:core-js@1.2.6/modules/es5",
-      "npm:core-js@1.2.6/modules/es6.symbol",
-      "npm:core-js@1.2.6/modules/es6.object.assign",
-      "npm:core-js@1.2.6/modules/es6.object.is",
-      "npm:core-js@1.2.6/modules/es6.object.set-prototype-of",
-      "npm:core-js@1.2.6/modules/es6.object.to-string",
-      "npm:core-js@1.2.6/modules/es6.object.freeze",
-      "npm:core-js@1.2.6/modules/es6.object.seal",
-      "npm:core-js@1.2.6/modules/es6.object.prevent-extensions",
-      "npm:core-js@1.2.6/modules/es6.object.is-frozen",
-      "npm:core-js@1.2.6/modules/es6.object.is-sealed",
-      "npm:core-js@1.2.6/modules/es6.object.is-extensible",
-      "npm:core-js@1.2.6/modules/es6.object.get-own-property-descriptor",
-      "npm:core-js@1.2.6/modules/es6.object.get-prototype-of",
-      "npm:core-js@1.2.6/modules/es6.object.keys",
-      "npm:core-js@1.2.6/modules/es6.object.get-own-property-names",
-      "npm:core-js@1.2.6/modules/es6.function.name",
-      "npm:core-js@1.2.6/modules/es6.function.has-instance",
-      "npm:core-js@1.2.6/modules/es6.number.constructor",
-      "npm:core-js@1.2.6/modules/es6.number.epsilon",
-      "npm:core-js@1.2.6/modules/es6.number.is-finite",
-      "npm:core-js@1.2.6/modules/es6.number.is-integer",
-      "npm:core-js@1.2.6/modules/es6.number.is-nan",
-      "npm:core-js@1.2.6/modules/es6.number.is-safe-integer",
-      "npm:core-js@1.2.6/modules/es6.number.max-safe-integer",
-      "npm:core-js@1.2.6/modules/es6.number.min-safe-integer",
-      "npm:core-js@1.2.6/modules/es6.number.parse-float",
-      "npm:core-js@1.2.6/modules/es6.number.parse-int",
-      "npm:core-js@1.2.6/modules/es6.math.acosh",
-      "npm:core-js@1.2.6/modules/es6.math.asinh",
-      "npm:core-js@1.2.6/modules/es6.math.atanh",
-      "npm:core-js@1.2.6/modules/es6.math.cbrt",
-      "npm:core-js@1.2.6/modules/es6.math.clz32",
-      "npm:core-js@1.2.6/modules/es6.math.cosh",
-      "npm:core-js@1.2.6/modules/es6.math.expm1",
-      "npm:core-js@1.2.6/modules/es6.math.fround",
-      "npm:core-js@1.2.6/modules/es6.math.hypot",
-      "npm:core-js@1.2.6/modules/es6.math.imul",
-      "npm:core-js@1.2.6/modules/es6.math.log10",
-      "npm:core-js@1.2.6/modules/es6.math.log1p",
-      "npm:core-js@1.2.6/modules/es6.math.log2",
-      "npm:core-js@1.2.6/modules/es6.math.sign",
-      "npm:core-js@1.2.6/modules/es6.math.sinh",
-      "npm:core-js@1.2.6/modules/es6.math.tanh",
-      "npm:core-js@1.2.6/modules/es6.math.trunc",
-      "npm:core-js@1.2.6/modules/es6.string.from-code-point",
-      "npm:core-js@1.2.6/modules/es6.string.raw",
-      "npm:core-js@1.2.6/modules/es6.string.trim",
-      "npm:core-js@1.2.6/modules/es6.string.iterator",
-      "npm:core-js@1.2.6/modules/es6.string.code-point-at",
-      "npm:core-js@1.2.6/modules/es6.string.ends-with",
-      "npm:core-js@1.2.6/modules/es6.string.includes",
-      "npm:core-js@1.2.6/modules/es6.string.repeat",
-      "npm:core-js@1.2.6/modules/es6.string.starts-with",
-      "npm:core-js@1.2.6/modules/es6.array.from",
-      "npm:core-js@1.2.6/modules/es6.array.of",
-      "npm:core-js@1.2.6/modules/es6.array.iterator",
-      "npm:core-js@1.2.6/modules/es6.array.species",
-      "npm:core-js@1.2.6/modules/es6.array.copy-within",
-      "npm:core-js@1.2.6/modules/es6.array.fill",
-      "npm:core-js@1.2.6/modules/es6.array.find",
-      "npm:core-js@1.2.6/modules/es6.array.find-index",
-      "npm:core-js@1.2.6/modules/es6.regexp.constructor",
-      "npm:core-js@1.2.6/modules/es6.regexp.flags",
-      "npm:core-js@1.2.6/modules/es6.regexp.match",
-      "npm:core-js@1.2.6/modules/es6.regexp.replace",
-      "npm:core-js@1.2.6/modules/es6.regexp.search",
-      "npm:core-js@1.2.6/modules/es6.regexp.split",
-      "npm:core-js@1.2.6/modules/es6.promise",
-      "npm:core-js@1.2.6/modules/es6.map",
-      "npm:core-js@1.2.6/modules/es6.set",
-      "npm:core-js@1.2.6/modules/es6.weak-map",
-      "npm:core-js@1.2.6/modules/es6.weak-set",
-      "npm:core-js@1.2.6/modules/es6.reflect.apply",
-      "npm:core-js@1.2.6/modules/es6.reflect.construct",
-      "npm:core-js@1.2.6/modules/es6.reflect.define-property",
-      "npm:core-js@1.2.6/modules/es6.reflect.delete-property",
-      "npm:core-js@1.2.6/modules/es6.reflect.enumerate",
-      "npm:core-js@1.2.6/modules/es6.reflect.get",
-      "npm:core-js@1.2.6/modules/es6.reflect.get-own-property-descriptor",
-      "npm:core-js@1.2.6/modules/es6.reflect.get-prototype-of",
-      "npm:core-js@1.2.6/modules/es6.reflect.has",
-      "npm:core-js@1.2.6/modules/es6.reflect.is-extensible",
-      "npm:core-js@1.2.6/modules/es6.reflect.own-keys",
-      "npm:core-js@1.2.6/modules/es6.reflect.prevent-extensions",
-      "npm:core-js@1.2.6/modules/es6.reflect.set",
-      "npm:core-js@1.2.6/modules/es6.reflect.set-prototype-of",
-      "npm:core-js@1.2.6/modules/es7.array.includes",
-      "npm:core-js@1.2.6/modules/es7.string.at",
-      "npm:core-js@1.2.6/modules/es7.string.pad-left",
-      "npm:core-js@1.2.6/modules/es7.string.pad-right",
-      "npm:core-js@1.2.6/modules/es7.string.trim-left",
-      "npm:core-js@1.2.6/modules/es7.string.trim-right",
-      "npm:core-js@1.2.6/modules/es7.regexp.escape",
-      "npm:core-js@1.2.6/modules/es7.object.get-own-property-descriptors",
-      "npm:core-js@1.2.6/modules/es7.object.values",
-      "npm:core-js@1.2.6/modules/es7.object.entries",
-      "npm:core-js@1.2.6/modules/es7.map.to-json",
-      "npm:core-js@1.2.6/modules/es7.set.to-json",
-      "npm:core-js@1.2.6/modules/js.array.statics",
-      "npm:core-js@1.2.6/modules/web.timers",
-      "npm:core-js@1.2.6/modules/web.immediate",
-      "npm:core-js@1.2.6/modules/web.dom.iterable",
-      "npm:core-js@1.2.6/modules/$",
-      "npm:core-js@1.2.6/modules/$.ctx",
-      "npm:core-js@1.2.6/modules/$.export",
-      "npm:core-js@1.2.6/modules/$.property-desc",
-      "npm:core-js@1.2.6/modules/$.object-assign",
-      "npm:core-js@1.2.6/modules/$.keyof",
-      "npm:core-js@1.2.6/modules/$.a-function",
-      "npm:core-js@1.2.6/modules/$.for-of",
-      "npm:core-js@1.2.6/modules/$.iter-create",
-      "npm:core-js@1.2.6/modules/$.iter-step",
-      "npm:core-js@1.2.6/modules/$.is-object",
-      "npm:core-js@1.2.6/modules/$.to-iobject",
-      "npm:core-js@1.2.6/modules/$.descriptors",
-      "npm:core-js@1.2.6/modules/$.has",
-      "npm:core-js@1.2.6/modules/$.classof",
-      "npm:core-js@1.2.6/modules/$.wks",
-      "npm:core-js@1.2.6/modules/$.iterators",
-      "npm:core-js@1.2.6/modules/$.an-object",
-      "npm:core-js@1.2.6/modules/$.global",
-      "npm:core-js@1.2.6/modules/$.partial",
-      "npm:core-js@1.2.6/modules/$.path",
-      "npm:core-js@1.2.6/modules/$.object-define",
-      "npm:core-js@1.2.6/modules/$.iter-define",
-      "npm:core-js@1.2.6/modules/$.replacer",
-      "npm:core-js@1.2.6/modules/$.html",
-      "npm:core-js@1.2.6/modules/$.dom-create",
-      "npm:core-js@1.2.6/modules/$.cof",
-      "npm:core-js@1.2.6/modules/$.invoke",
-      "npm:core-js@1.2.6/modules/$.fails",
-      "npm:core-js@1.2.6/modules/$.to-object",
-      "npm:core-js@1.2.6/modules/$.to-integer",
-      "npm:core-js@1.2.6/modules/$.to-index",
-      "npm:core-js@1.2.6/modules/$.to-length",
-      "npm:core-js@1.2.6/modules/$.iobject",
-      "npm:core-js@1.2.6/modules/$.uid",
-      "npm:core-js@1.2.6/modules/$.array-methods",
-      "npm:core-js@1.2.6/modules/$.array-includes",
-      "npm:core-js@1.2.6/modules/$.is-array",
-      "npm:core-js@1.2.6/modules/$.redefine",
-      "npm:core-js@1.2.6/modules/$.shared",
-      "npm:core-js@1.2.6/modules/$.set-to-string-tag",
-      "npm:core-js@1.2.6/modules/$.get-names",
-      "npm:core-js@1.2.6/modules/$.enum-keys",
-      "npm:core-js@1.2.6/modules/$.library",
-      "npm:core-js@1.2.6/modules/$.same-value",
-      "npm:core-js@1.2.6/modules/$.set-proto",
-      "npm:core-js@1.2.6/modules/$.object-sap",
-      "npm:core-js@1.2.6/modules/$.to-primitive",
-      "npm:core-js@1.2.6/modules/$.string-trim",
-      "npm:core-js@1.2.6/modules/$.is-integer",
-      "npm:core-js@1.2.6/modules/$.math-log1p",
-      "npm:core-js@1.2.6/modules/$.math-sign",
-      "npm:core-js@1.2.6/modules/$.math-expm1",
-      "npm:core-js@1.2.6/modules/$.string-at",
-      "npm:core-js@1.2.6/modules/$.string-context",
-      "npm:core-js@1.2.6/modules/$.fails-is-regexp",
-      "npm:core-js@1.2.6/modules/$.string-repeat",
-      "npm:core-js@1.2.6/modules/$.iter-call",
-      "npm:core-js@1.2.6/modules/$.is-array-iter",
-      "npm:core-js@1.2.6/modules/$.iter-detect",
-      "npm:core-js@1.2.6/modules/$.add-to-unscopables",
-      "npm:core-js@1.2.6/modules/$.set-species",
-      "npm:core-js@1.2.6/modules/$.array-copy-within",
-      "npm:core-js@1.2.6/modules/$.array-fill",
-      "npm:core-js@1.2.6/modules/$.is-regexp",
-      "npm:core-js@1.2.6/modules/$.flags",
-      "npm:core-js@1.2.6/modules/$.fix-re-wks",
-      "npm:core-js@1.2.6/modules/$.strict-new",
-      "npm:core-js@1.2.6/modules/$.species-constructor",
-      "npm:core-js@1.2.6/modules/$.microtask",
-      "npm:core-js@1.2.6/modules/$.redefine-all",
-      "github:jspm/nodelibs-process@0.1.2",
-      "npm:core-js@1.2.6/modules/$.collection-strong",
-      "npm:core-js@1.2.6/modules/$.collection",
-      "npm:core-js@1.2.6/modules/$.collection-weak",
-      "npm:core-js@1.2.6/modules/$.own-keys",
-      "npm:core-js@1.2.6/modules/$.string-pad",
-      "npm:core-js@1.2.6/modules/$.object-to-array",
-      "npm:core-js@1.2.6/modules/$.collection-to-json",
-      "npm:core-js@1.2.6/modules/$.task",
-      "npm:core-js@1.2.6/modules/$.hide",
-      "npm:core-js@1.2.6/modules/$.defined",
-      "npm:core-js@1.2.6/modules/$.array-species-create",
-      "github:jspm/nodelibs-process@0.1.2/index",
-      "npm:process@0.11.2",
-      "npm:process@0.11.2/browser",
-      "npm:aurelia-logging-console@1.0.0-beta.1",
-      "npm:aurelia-logging-console@1.0.0-beta.1/aurelia-logging-console",
-      "npm:aurelia-history-browser@1.0.0-beta.1.0.1",
-      "npm:aurelia-history-browser@1.0.0-beta.1.0.1/aurelia-history-browser",
-      "npm:aurelia-history@1.0.0-beta.1",
-      "npm:aurelia-history@1.0.0-beta.1/aurelia-history",
-      "npm:aurelia-templating-router@1.0.0-beta.1.0.5",
-      "npm:aurelia-templating-router@1.0.0-beta.1.0.5/aurelia-templating-router",
-      "npm:aurelia-templating-router@1.0.0-beta.1.0.5/route-loader",
-      "npm:aurelia-templating-router@1.0.0-beta.1.0.5/router-view",
-      "npm:aurelia-router@1.0.0-beta.1.0.1",
-      "npm:aurelia-templating-router@1.0.0-beta.1.0.5/route-href",
-      "npm:aurelia-router@1.0.0-beta.1.0.1/aurelia-router",
-      "npm:aurelia-event-aggregator@1.0.0-beta.1",
-      "npm:aurelia-event-aggregator@1.0.0-beta.1/aurelia-event-aggregator",
-      "npm:aurelia-route-recognizer@1.0.0-beta.1",
-      "npm:aurelia-route-recognizer@1.0.0-beta.1/aurelia-route-recognizer",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/aurelia-templating-resources",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/html-sanitizer",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/with",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/if",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/compose",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/show",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/replaceable",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/focus",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/view-spy",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/compile-spy",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/css-resource",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/binding-mode-behaviors",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/dynamic-element",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/throttle-binding-behavior",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/repeat",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/sanitize-html",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/debounce-binding-behavior",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/binding-signaler",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/update-trigger-binding-behavior",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/signal-binding-behavior",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/repeat-utilities",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/analyze-view-factory",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/repeat-strategy-locator",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/null-repeat-strategy",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/array-repeat-strategy",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/map-repeat-strategy",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/number-repeat-strategy",
-      "npm:aurelia-templating-resources@1.0.0-beta.1.0.4/set-repeat-strategy",
-      "npm:aurelia-loader-default@1.0.0-beta.1.0.2",
-      "npm:aurelia-loader-default@1.0.0-beta.1.0.2/aurelia-loader-default",
-      "npm:aurelia-bootstrapper@1.0.0-beta.1.0.2",
-      "npm:aurelia-bootstrapper@1.0.0-beta.1.0.2/aurelia-bootstrapper",
-      "npm:aurelia-pal-browser@1.0.0-beta.1.0.3",
-      "npm:aurelia-pal-browser@1.0.0-beta.1.0.3/aurelia-pal-browser",
-      "npm:aurelia-framework@1.0.0-beta.1.0.8",
-      "npm:aurelia-framework@1.0.0-beta.1.0.8/aurelia-framework"
+      "npm:aurelia-templating-binding@1.5.2",
+      "npm:aurelia-templating-binding@1.5.2/aurelia-templating-binding",
+      "npm:aurelia-logging@1.5.0",
+      "npm:aurelia-binding@2.1.6",
+      "npm:aurelia-templating@1.10.1",
+      "npm:aurelia-logging@1.5.0/aurelia-logging",
+      "npm:aurelia-binding@2.1.6/aurelia-binding",
+      "npm:aurelia-templating@1.10.1/aurelia-templating",
+      "npm:aurelia-pal@1.8.0",
+      "npm:aurelia-task-queue@1.3.1",
+      "npm:aurelia-metadata@1.0.4",
+      "npm:aurelia-loader@1.0.0",
+      "npm:aurelia-path@1.1.1",
+      "npm:aurelia-dependency-injection@1.4.1",
+      "npm:aurelia-pal@1.8.0/aurelia-pal",
+      "npm:aurelia-task-queue@1.3.1/aurelia-task-queue",
+      "npm:aurelia-metadata@1.0.4/aurelia-metadata",
+      "npm:aurelia-loader@1.0.0/aurelia-loader",
+      "npm:aurelia-path@1.1.1/aurelia-path",
+      "npm:aurelia-dependency-injection@1.4.1/aurelia-dependency-injection",
+      "npm:aurelia-logging-console@1.0.0",
+      "npm:aurelia-logging-console@1.0.0/aurelia-logging-console",
+      "npm:aurelia-history-browser@1.2.0",
+      "npm:aurelia-history-browser@1.2.0/aurelia-history-browser",
+      "npm:aurelia-history@1.1.0",
+      "npm:aurelia-history@1.1.0/aurelia-history",
+      "npm:aurelia-templating-router@1.3.3",
+      "npm:aurelia-templating-router@1.3.3/aurelia-templating-router",
+      "npm:aurelia-templating-router@1.3.3/router-view",
+      "npm:aurelia-templating-router@1.3.3/route-href",
+      "npm:aurelia-router@1.6.3",
+      "npm:aurelia-templating-router@1.3.3/route-loader",
+      "npm:aurelia-router@1.6.3/aurelia-router",
+      "npm:aurelia-event-aggregator@1.0.1",
+      "npm:aurelia-event-aggregator@1.0.1/aurelia-event-aggregator",
+      "npm:aurelia-route-recognizer@1.3.1",
+      "npm:aurelia-route-recognizer@1.3.1/aurelia-route-recognizer",
+      "npm:aurelia-templating-resources@1.7.1",
+      "npm:aurelia-templating-resources@1.7.1/aurelia-templating-resources",
+      "npm:aurelia-templating-resources@1.7.1/html-sanitizer",
+      "npm:aurelia-templating-resources@1.7.1/abstract-repeater",
+      "npm:aurelia-templating-resources@1.7.1/null-repeat-strategy",
+      "npm:aurelia-templating-resources@1.7.1/analyze-view-factory",
+      "npm:aurelia-templating-resources@1.7.1/compose",
+      "npm:aurelia-templating-resources@1.7.1/with",
+      "npm:aurelia-templating-resources@1.7.1/replaceable",
+      "npm:aurelia-templating-resources@1.7.1/focus",
+      "npm:aurelia-templating-resources@1.7.1/css-resource",
+      "npm:aurelia-templating-resources@1.7.1/attr-binding-behavior",
+      "npm:aurelia-templating-resources@1.7.1/binding-mode-behaviors",
+      "npm:aurelia-templating-resources@1.7.1/throttle-binding-behavior",
+      "npm:aurelia-templating-resources@1.7.1/debounce-binding-behavior",
+      "npm:aurelia-templating-resources@1.7.1/self-binding-behavior",
+      "npm:aurelia-templating-resources@1.7.1/binding-signaler",
+      "npm:aurelia-templating-resources@1.7.1/update-trigger-binding-behavior",
+      "npm:aurelia-templating-resources@1.7.1/repeat-utilities",
+      "npm:aurelia-templating-resources@1.7.1/aurelia-hide-style",
+      "npm:aurelia-templating-resources@1.7.1/if",
+      "npm:aurelia-templating-resources@1.7.1/else",
+      "npm:aurelia-templating-resources@1.7.1/repeat",
+      "npm:aurelia-templating-resources@1.7.1/show",
+      "npm:aurelia-templating-resources@1.7.1/hide",
+      "npm:aurelia-templating-resources@1.7.1/sanitize-html",
+      "npm:aurelia-templating-resources@1.7.1/signal-binding-behavior",
+      "npm:aurelia-templating-resources@1.7.1/repeat-strategy-locator",
+      "npm:aurelia-templating-resources@1.7.1/html-resource-plugin",
+      "npm:aurelia-templating-resources@1.7.1/array-repeat-strategy",
+      "npm:aurelia-templating-resources@1.7.1/map-repeat-strategy",
+      "npm:aurelia-templating-resources@1.7.1/set-repeat-strategy",
+      "npm:aurelia-templating-resources@1.7.1/number-repeat-strategy",
+      "npm:aurelia-templating-resources@1.7.1/if-core",
+      "npm:aurelia-templating-resources@1.7.1/dynamic-element",
+      "npm:aurelia-loader-default@1.0.4",
+      "npm:aurelia-loader-default@1.0.4/aurelia-loader-default",
+      "npm:aurelia-bootstrapper@2.3.0",
+      "npm:aurelia-bootstrapper@2.3.0/aurelia-bootstrapper",
+      "npm:aurelia-polyfills@1.3.0",
+      "npm:aurelia-polyfills@1.3.0/aurelia-polyfills",
+      "npm:aurelia-framework@1.3.0",
+      "npm:aurelia-framework@1.3.0/aurelia-framework"
     ]
   },
 
   map: {
-    "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0-beta.1.0.2",
-    "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.0-beta.1",
-    "aurelia-framework": "npm:aurelia-framework@1.0.0-beta.1.0.8",
-    "aurelia-history-browser": "npm:aurelia-history-browser@1.0.0-beta.1.0.1",
-    "aurelia-loader-default": "npm:aurelia-loader-default@1.0.0-beta.1.0.2",
-    "aurelia-logging-console": "npm:aurelia-logging-console@1.0.0-beta.1",
-    "aurelia-templating-binding": "npm:aurelia-templating-binding@1.0.0-beta.1.0.2",
-    "aurelia-templating-resources": "npm:aurelia-templating-resources@1.0.0-beta.1.0.4",
-    "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0-beta.1.0.5",
+    "aurelia-bootstrapper": "npm:aurelia-bootstrapper@2.3.0",
+    "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.1",
+    "aurelia-fetch-client": "npm:aurelia-fetch-client@1.6.0",
+    "aurelia-framework": "npm:aurelia-framework@1.3.0",
+    "aurelia-history-browser": "npm:aurelia-history-browser@1.2.0",
+    "aurelia-http-client": "npm:aurelia-http-client@1.3.0",
+    "aurelia-loader-default": "npm:aurelia-loader-default@1.0.4",
+    "aurelia-logging-console": "npm:aurelia-logging-console@1.0.0",
+    "aurelia-pal-browser": "npm:aurelia-pal-browser@1.8.0",
+    "aurelia-templating-binding": "npm:aurelia-templating-binding@1.5.2",
+    "aurelia-templating-resources": "npm:aurelia-templating-resources@1.7.1",
+    "aurelia-templating-router": "npm:aurelia-templating-router@1.3.3",
     "core-js": "npm:core-js@2.0.3",
+    "gulp-util": "npm:gulp-util@3.0.8",
+    "jquery": "npm:jquery@3.3.1",
+    "mathjs": "npm:mathjs@5.2.3",
     "text": "github:systemjs/plugin-text@0.0.4",
     "github:jspm/nodelibs-assert@0.1.0": {
-      "assert": "npm:assert@1.3.0"
+      "assert": "npm:assert@1.4.1"
+    },
+    "github:jspm/nodelibs-buffer@0.1.1": {
+      "buffer": "npm:buffer@5.2.1"
+    },
+    "github:jspm/nodelibs-events@0.1.1": {
+      "events": "npm:events@1.0.2"
     },
     "github:jspm/nodelibs-path@0.1.0": {
       "path-browserify": "npm:path-browserify@0.0.0"
     },
     "github:jspm/nodelibs-process@0.1.2": {
-      "process": "npm:process@0.11.2"
+      "process": "npm:process@0.11.10"
+    },
+    "github:jspm/nodelibs-stream@0.1.0": {
+      "stream-browserify": "npm:stream-browserify@1.0.0"
     },
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
     },
-    "npm:assert@1.3.0": {
+    "github:jspm/nodelibs-vm@0.1.0": {
+      "vm-browserify": "npm:vm-browserify@0.0.4"
+    },
+    "npm:ansi-gray@0.1.1": {
+      "ansi-wrap": "npm:ansi-wrap@0.1.0"
+    },
+    "npm:assert@1.4.1": {
+      "assert": "github:jspm/nodelibs-assert@0.1.0",
+      "buffer": "github:jspm/nodelibs-buffer@0.1.1",
+      "process": "github:jspm/nodelibs-process@0.1.2",
       "util": "npm:util@0.10.3"
     },
-    "npm:aurelia-binding@1.0.0-beta.1.0.5": {
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.1",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.0.2",
-      "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0-beta.1.0.1",
-      "core-js": "npm:core-js@1.2.6"
+    "npm:aurelia-binding@2.1.6": {
+      "aurelia-logging": "npm:aurelia-logging@1.5.0",
+      "aurelia-metadata": "npm:aurelia-metadata@1.0.4",
+      "aurelia-pal": "npm:aurelia-pal@1.8.0",
+      "aurelia-task-queue": "npm:aurelia-task-queue@1.3.1"
     },
-    "npm:aurelia-bootstrapper@1.0.0-beta.1.0.2": {
-      "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.0-beta.1",
-      "aurelia-framework": "npm:aurelia-framework@1.0.0-beta.1.0.8",
-      "aurelia-history": "npm:aurelia-history@1.0.0-beta.1",
-      "aurelia-history-browser": "npm:aurelia-history-browser@1.0.0-beta.1.0.1",
-      "aurelia-loader-default": "npm:aurelia-loader-default@1.0.0-beta.1.0.2",
-      "aurelia-logging-console": "npm:aurelia-logging-console@1.0.0-beta.1",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.0.2",
-      "aurelia-pal-browser": "npm:aurelia-pal-browser@1.0.0-beta.1.0.3",
-      "aurelia-router": "npm:aurelia-router@1.0.0-beta.1.0.1",
-      "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.1.0.3",
-      "aurelia-templating-binding": "npm:aurelia-templating-binding@1.0.0-beta.1.0.2",
-      "aurelia-templating-resources": "npm:aurelia-templating-resources@1.0.0-beta.1.0.4",
-      "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0-beta.1.0.5",
-      "core-js": "npm:core-js@1.2.6"
+    "npm:aurelia-bootstrapper@2.3.0": {
+      "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.1",
+      "aurelia-framework": "npm:aurelia-framework@1.3.0",
+      "aurelia-history": "npm:aurelia-history@1.1.0",
+      "aurelia-history-browser": "npm:aurelia-history-browser@1.2.0",
+      "aurelia-loader-default": "npm:aurelia-loader-default@1.0.4",
+      "aurelia-logging-console": "npm:aurelia-logging-console@1.0.0",
+      "aurelia-pal": "npm:aurelia-pal@1.8.0",
+      "aurelia-pal-browser": "npm:aurelia-pal-browser@1.8.0",
+      "aurelia-polyfills": "npm:aurelia-polyfills@1.3.0",
+      "aurelia-router": "npm:aurelia-router@1.6.3",
+      "aurelia-templating": "npm:aurelia-templating@1.10.1",
+      "aurelia-templating-binding": "npm:aurelia-templating-binding@1.5.2",
+      "aurelia-templating-resources": "npm:aurelia-templating-resources@1.7.1",
+      "aurelia-templating-router": "npm:aurelia-templating-router@1.3.3"
     },
-    "npm:aurelia-dependency-injection@1.0.0-beta.1.0.1": {
-      "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.1",
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.1",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.0.2",
-      "core-js": "npm:core-js@1.2.6"
+    "npm:aurelia-dependency-injection@1.4.1": {
+      "aurelia-metadata": "npm:aurelia-metadata@1.0.4",
+      "aurelia-pal": "npm:aurelia-pal@1.8.0"
     },
-    "npm:aurelia-event-aggregator@1.0.0-beta.1": {
-      "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.1"
+    "npm:aurelia-event-aggregator@1.0.1": {
+      "aurelia-logging": "npm:aurelia-logging@1.5.0"
     },
-    "npm:aurelia-framework@1.0.0-beta.1.0.8": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.1.0.5",
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.1.0.1",
-      "aurelia-loader": "npm:aurelia-loader@1.0.0-beta.1.0.1",
-      "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.1",
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.1",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.0.2",
-      "aurelia-path": "npm:aurelia-path@1.0.0-beta.1",
-      "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0-beta.1.0.1",
-      "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.1.0.3",
-      "core-js": "npm:core-js@1.2.6"
+    "npm:aurelia-fetch-client@1.6.0": {
+      "aurelia-pal": "npm:aurelia-pal@1.8.0"
     },
-    "npm:aurelia-history-browser@1.0.0-beta.1.0.1": {
-      "aurelia-history": "npm:aurelia-history@1.0.0-beta.1",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.0.2",
-      "core-js": "npm:core-js@1.2.6"
+    "npm:aurelia-framework@1.3.0": {
+      "aurelia-binding": "npm:aurelia-binding@2.1.6",
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.4.1",
+      "aurelia-loader": "npm:aurelia-loader@1.0.0",
+      "aurelia-logging": "npm:aurelia-logging@1.5.0",
+      "aurelia-metadata": "npm:aurelia-metadata@1.0.4",
+      "aurelia-pal": "npm:aurelia-pal@1.8.0",
+      "aurelia-path": "npm:aurelia-path@1.1.1",
+      "aurelia-task-queue": "npm:aurelia-task-queue@1.3.1",
+      "aurelia-templating": "npm:aurelia-templating@1.10.1"
     },
-    "npm:aurelia-loader-default@1.0.0-beta.1.0.2": {
-      "aurelia-loader": "npm:aurelia-loader@1.0.0-beta.1.0.1",
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.1",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.0.2"
+    "npm:aurelia-history-browser@1.2.0": {
+      "aurelia-history": "npm:aurelia-history@1.1.0",
+      "aurelia-pal": "npm:aurelia-pal@1.8.0"
     },
-    "npm:aurelia-loader@1.0.0-beta.1.0.1": {
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.1",
-      "aurelia-path": "npm:aurelia-path@1.0.0-beta.1"
+    "npm:aurelia-http-client@1.3.0": {
+      "aurelia-pal": "npm:aurelia-pal@1.8.0",
+      "aurelia-path": "npm:aurelia-path@1.1.1"
     },
-    "npm:aurelia-logging-console@1.0.0-beta.1": {
-      "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.1",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.0.2"
+    "npm:aurelia-loader-default@1.0.4": {
+      "aurelia-loader": "npm:aurelia-loader@1.0.0",
+      "aurelia-metadata": "npm:aurelia-metadata@1.0.4",
+      "aurelia-pal": "npm:aurelia-pal@1.8.0"
     },
-    "npm:aurelia-metadata@1.0.0-beta.1": {
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.0.2",
-      "core-js": "npm:core-js@1.2.6"
+    "npm:aurelia-loader@1.0.0": {
+      "aurelia-metadata": "npm:aurelia-metadata@1.0.4",
+      "aurelia-path": "npm:aurelia-path@1.1.1"
     },
-    "npm:aurelia-pal-browser@1.0.0-beta.1.0.3": {
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.0.2",
-      "core-js": "npm:core-js@1.2.6"
+    "npm:aurelia-logging-console@1.0.0": {
+      "aurelia-logging": "npm:aurelia-logging@1.5.0"
     },
-    "npm:aurelia-route-recognizer@1.0.0-beta.1": {
-      "aurelia-path": "npm:aurelia-path@1.0.0-beta.1",
-      "core-js": "npm:core-js@1.2.6"
+    "npm:aurelia-metadata@1.0.4": {
+      "aurelia-pal": "npm:aurelia-pal@1.8.0"
     },
-    "npm:aurelia-router@1.0.0-beta.1.0.1": {
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.1.0.1",
-      "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.0-beta.1",
-      "aurelia-history": "npm:aurelia-history@1.0.0-beta.1",
-      "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.1",
-      "aurelia-path": "npm:aurelia-path@1.0.0-beta.1",
-      "aurelia-route-recognizer": "npm:aurelia-route-recognizer@1.0.0-beta.1",
-      "core-js": "npm:core-js@1.2.6"
+    "npm:aurelia-pal-browser@1.8.0": {
+      "aurelia-pal": "npm:aurelia-pal@1.8.0"
     },
-    "npm:aurelia-task-queue@1.0.0-beta.1.0.1": {
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.0.2"
+    "npm:aurelia-polyfills@1.3.0": {
+      "aurelia-pal": "npm:aurelia-pal@1.8.0"
     },
-    "npm:aurelia-templating-binding@1.0.0-beta.1.0.2": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.1.0.5",
-      "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.1",
-      "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.1.0.3"
+    "npm:aurelia-route-recognizer@1.3.1": {
+      "aurelia-path": "npm:aurelia-path@1.1.1"
     },
-    "npm:aurelia-templating-resources@1.0.0-beta.1.0.4": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.1.0.5",
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.1.0.1",
-      "aurelia-loader": "npm:aurelia-loader@1.0.0-beta.1.0.1",
-      "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.1",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.0.2",
-      "aurelia-path": "npm:aurelia-path@1.0.0-beta.1",
-      "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0-beta.1.0.1",
-      "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.1.0.3",
-      "core-js": "npm:core-js@1.2.6"
+    "npm:aurelia-router@1.6.3": {
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.4.1",
+      "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.1",
+      "aurelia-history": "npm:aurelia-history@1.1.0",
+      "aurelia-logging": "npm:aurelia-logging@1.5.0",
+      "aurelia-path": "npm:aurelia-path@1.1.1",
+      "aurelia-route-recognizer": "npm:aurelia-route-recognizer@1.3.1"
     },
-    "npm:aurelia-templating-router@1.0.0-beta.1.0.5": {
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.1.0.1",
-      "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.1",
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.1",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.0.2",
-      "aurelia-path": "npm:aurelia-path@1.0.0-beta.1",
-      "aurelia-router": "npm:aurelia-router@1.0.0-beta.1.0.1",
-      "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.1.0.3"
+    "npm:aurelia-task-queue@1.3.1": {
+      "aurelia-pal": "npm:aurelia-pal@1.8.0"
     },
-    "npm:aurelia-templating@1.0.0-beta.1.0.3": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.1.0.5",
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.1.0.1",
-      "aurelia-loader": "npm:aurelia-loader@1.0.0-beta.1.0.1",
-      "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.1",
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.1",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.0.2",
-      "aurelia-path": "npm:aurelia-path@1.0.0-beta.1",
-      "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0-beta.1.0.1",
-      "core-js": "npm:core-js@1.2.6"
+    "npm:aurelia-templating-binding@1.5.2": {
+      "aurelia-binding": "npm:aurelia-binding@2.1.6",
+      "aurelia-logging": "npm:aurelia-logging@1.5.0",
+      "aurelia-templating": "npm:aurelia-templating@1.10.1"
     },
-    "npm:core-js@1.2.6": {
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "path": "github:jspm/nodelibs-path@0.1.0",
+    "npm:aurelia-templating-resources@1.7.1": {
+      "aurelia-binding": "npm:aurelia-binding@2.1.6",
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.4.1",
+      "aurelia-loader": "npm:aurelia-loader@1.0.0",
+      "aurelia-logging": "npm:aurelia-logging@1.5.0",
+      "aurelia-metadata": "npm:aurelia-metadata@1.0.4",
+      "aurelia-pal": "npm:aurelia-pal@1.8.0",
+      "aurelia-path": "npm:aurelia-path@1.1.1",
+      "aurelia-task-queue": "npm:aurelia-task-queue@1.3.1",
+      "aurelia-templating": "npm:aurelia-templating@1.10.1"
+    },
+    "npm:aurelia-templating-router@1.3.3": {
+      "aurelia-binding": "npm:aurelia-binding@2.1.6",
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.4.1",
+      "aurelia-logging": "npm:aurelia-logging@1.5.0",
+      "aurelia-metadata": "npm:aurelia-metadata@1.0.4",
+      "aurelia-pal": "npm:aurelia-pal@1.8.0",
+      "aurelia-path": "npm:aurelia-path@1.1.1",
+      "aurelia-router": "npm:aurelia-router@1.6.3",
+      "aurelia-templating": "npm:aurelia-templating@1.10.1"
+    },
+    "npm:aurelia-templating@1.10.1": {
+      "aurelia-binding": "npm:aurelia-binding@2.1.6",
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.4.1",
+      "aurelia-loader": "npm:aurelia-loader@1.0.0",
+      "aurelia-logging": "npm:aurelia-logging@1.5.0",
+      "aurelia-metadata": "npm:aurelia-metadata@1.0.4",
+      "aurelia-pal": "npm:aurelia-pal@1.8.0",
+      "aurelia-path": "npm:aurelia-path@1.1.1",
+      "aurelia-task-queue": "npm:aurelia-task-queue@1.3.1"
+    },
+    "npm:beeper@1.1.1": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:buffer@5.2.1": {
+      "base64-js": "npm:base64-js@1.3.0",
+      "ieee754": "npm:ieee754@1.1.12"
+    },
+    "npm:chalk@1.1.3": {
+      "ansi-styles": "npm:ansi-styles@2.2.1",
+      "escape-string-regexp": "npm:escape-string-regexp@1.0.5",
+      "has-ansi": "npm:has-ansi@2.0.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
-      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+      "strip-ansi": "npm:strip-ansi@3.0.1",
+      "supports-color": "npm:supports-color@2.0.0"
+    },
+    "npm:clone-stats@0.0.1": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2"
+    },
+    "npm:clone@1.0.4": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.1"
+    },
+    "npm:color-support@1.1.3": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:core-js@2.0.3": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
@@ -457,18 +296,195 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
+    "npm:core-util-is@1.0.2": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.1"
+    },
+    "npm:duplexer2@0.0.2": {
+      "readable-stream": "npm:readable-stream@1.1.14"
+    },
+    "npm:fancy-log@1.3.2": {
+      "ansi-gray": "npm:ansi-gray@0.1.1",
+      "color-support": "npm:color-support@1.1.3",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "time-stamp": "npm:time-stamp@1.1.0"
+    },
+    "npm:glogg@1.0.1": {
+      "sparkles": "npm:sparkles@1.0.1",
+      "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:gulp-util@3.0.8": {
+      "array-differ": "npm:array-differ@1.0.0",
+      "array-uniq": "npm:array-uniq@1.0.3",
+      "beeper": "npm:beeper@1.1.1",
+      "buffer": "github:jspm/nodelibs-buffer@0.1.1",
+      "chalk": "npm:chalk@1.1.3",
+      "dateformat": "npm:dateformat@2.2.0",
+      "fancy-log": "npm:fancy-log@1.3.2",
+      "gulplog": "npm:gulplog@1.0.0",
+      "has-gulplog": "npm:has-gulplog@0.1.0",
+      "lodash._reescape": "npm:lodash._reescape@3.0.0",
+      "lodash._reevaluate": "npm:lodash._reevaluate@3.0.0",
+      "lodash._reinterpolate": "npm:lodash._reinterpolate@3.0.0",
+      "lodash.template": "npm:lodash.template@3.6.2",
+      "minimist": "npm:minimist@1.2.0",
+      "multipipe": "npm:multipipe@0.1.2",
+      "object-assign": "npm:object-assign@3.0.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "replace-ext": "npm:replace-ext@0.0.1",
+      "stream": "github:jspm/nodelibs-stream@0.1.0",
+      "through2": "npm:through2@2.0.5",
+      "util": "github:jspm/nodelibs-util@0.1.0",
+      "vinyl": "npm:vinyl@0.5.3"
+    },
+    "npm:gulplog@1.0.0": {
+      "glogg": "npm:glogg@1.0.1"
+    },
+    "npm:has-ansi@2.0.0": {
+      "ansi-regex": "npm:ansi-regex@2.1.1"
+    },
+    "npm:has-gulplog@0.1.0": {
+      "sparkles": "npm:sparkles@1.0.1"
+    },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:inherits@2.0.3": {
+      "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:lodash._basetostring@3.0.1": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:lodash.escape@3.2.0": {
+      "lodash._root": "npm:lodash._root@3.0.1",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:lodash.keys@3.1.2": {
+      "lodash._getnative": "npm:lodash._getnative@3.9.1",
+      "lodash.isarguments": "npm:lodash.isarguments@3.1.0",
+      "lodash.isarray": "npm:lodash.isarray@3.0.4"
+    },
+    "npm:lodash.template@3.6.2": {
+      "lodash._basecopy": "npm:lodash._basecopy@3.0.1",
+      "lodash._basetostring": "npm:lodash._basetostring@3.0.1",
+      "lodash._basevalues": "npm:lodash._basevalues@3.0.0",
+      "lodash._isiterateecall": "npm:lodash._isiterateecall@3.0.9",
+      "lodash._reinterpolate": "npm:lodash._reinterpolate@3.0.0",
+      "lodash.escape": "npm:lodash.escape@3.2.0",
+      "lodash.keys": "npm:lodash.keys@3.1.2",
+      "lodash.restparam": "npm:lodash.restparam@3.6.1",
+      "lodash.templatesettings": "npm:lodash.templatesettings@3.1.1"
+    },
+    "npm:lodash.templatesettings@3.1.1": {
+      "lodash._reinterpolate": "npm:lodash._reinterpolate@3.0.0",
+      "lodash.escape": "npm:lodash.escape@3.2.0"
+    },
+    "npm:mathjs@5.2.3": {
+      "complex.js": "npm:complex.js@2.0.11",
+      "decimal.js": "npm:decimal.js@10.0.1",
+      "escape-latex": "npm:escape-latex@1.2.0",
+      "fraction.js": "npm:fraction.js@4.0.10",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "javascript-natural-sort": "npm:javascript-natural-sort@0.7.1",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "readline": "github:jspm/nodelibs-readline@0.1.0",
+      "repl": "github:jspm/nodelibs-repl@0.1.0",
+      "seed-random": "npm:seed-random@2.2.0",
+      "tiny-emitter": "npm:tiny-emitter@2.0.2",
+      "typed-function": "npm:typed-function@1.1.0"
+    },
+    "npm:multipipe@0.1.2": {
+      "duplexer2": "npm:duplexer2@0.0.2",
+      "stream": "github:jspm/nodelibs-stream@0.1.0"
     },
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:process@0.11.2": {
+    "npm:process-nextick-args@2.0.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:process@0.11.10": {
+      "assert": "github:jspm/nodelibs-assert@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "vm": "github:jspm/nodelibs-vm@0.1.0"
+    },
+    "npm:readable-stream@1.1.14": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.1",
+      "core-util-is": "npm:core-util-is@1.0.2",
+      "events": "github:jspm/nodelibs-events@0.1.1",
+      "inherits": "npm:inherits@2.0.3",
+      "isarray": "npm:isarray@0.0.1",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "stream-browserify": "npm:stream-browserify@1.0.0",
+      "string_decoder": "npm:string_decoder@0.10.31"
+    },
+    "npm:readable-stream@2.3.6": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.1",
+      "core-util-is": "npm:core-util-is@1.0.2",
+      "events": "github:jspm/nodelibs-events@0.1.1",
+      "inherits": "npm:inherits@2.0.3",
+      "isarray": "npm:isarray@1.0.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "process-nextick-args": "npm:process-nextick-args@2.0.0",
+      "safe-buffer": "npm:safe-buffer@5.1.2",
+      "stream": "github:jspm/nodelibs-stream@0.1.0",
+      "string_decoder": "npm:string_decoder@1.1.1",
+      "util-deprecate": "npm:util-deprecate@1.0.2"
+    },
+    "npm:replace-ext@0.0.1": {
+      "path": "github:jspm/nodelibs-path@0.1.0"
+    },
+    "npm:safe-buffer@5.1.2": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.1"
+    },
+    "npm:sparkles@1.0.1": {
+      "events": "github:jspm/nodelibs-events@0.1.1"
+    },
+    "npm:stream-browserify@1.0.0": {
+      "events": "github:jspm/nodelibs-events@0.1.1",
+      "inherits": "npm:inherits@2.0.3",
+      "readable-stream": "npm:readable-stream@1.1.14"
+    },
+    "npm:string_decoder@0.10.31": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.1"
+    },
+    "npm:string_decoder@1.1.1": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.1",
+      "safe-buffer": "npm:safe-buffer@5.1.2"
+    },
+    "npm:strip-ansi@3.0.1": {
+      "ansi-regex": "npm:ansi-regex@2.1.1"
+    },
+    "npm:supports-color@2.0.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:through2@2.0.5": {
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "readable-stream": "npm:readable-stream@2.3.6",
+      "util": "github:jspm/nodelibs-util@0.1.0",
+      "xtend": "npm:xtend@4.0.1"
+    },
+    "npm:typed-function@1.1.0": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"
+    },
+    "npm:util-deprecate@1.0.2": {
+      "util": "github:jspm/nodelibs-util@0.1.0"
     },
     "npm:util@0.10.3": {
       "inherits": "npm:inherits@2.0.1",
       "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:vinyl@0.5.3": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.1",
+      "clone": "npm:clone@1.0.4",
+      "clone-stats": "npm:clone-stats@0.0.1",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "replace-ext": "npm:replace-ext@0.0.1",
+      "stream": "github:jspm/nodelibs-stream@0.1.0"
+    },
+    "npm:vm-browserify@0.0.4": {
+      "indexof": "npm:indexof@0.0.1"
     }
   }
 });
