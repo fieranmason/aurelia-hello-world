@@ -21,82 +21,73 @@ export class Calculator {
       				})
       				.withInterceptor({
         				request(request) {
-          					console.log(`Requesting ${request.method} ${request.url}`);
           					return request;
         				},
         				response(response) {
-          					console.log(`Received ${response.status} ${response.url}`);
           					return response;
         				}
       				});
   			});
 	}
 
-	//NOTE -- should look at using swagger like framework to generate an API
-
 	add(a, b) {
 		//level up
-		//this.use_arithmetic_service('add', a, b);
+		return this.use_arithmetic_service('add', a, b);
 
 		//coward's way out
-		return a + b;
+		//return a + b;
 	}
 
 	subtract(a, b) {
 		//level up
-		//this.use_arithmetic_service('subtract', a, b);
+		return this.use_arithmetic_service('subtract', a, b);
 
 		//coward's way out
-		return a-b;
+		//return a-b;
 	}
 
 	multiply(a, b) {
 		//level up
-		//this.use_arithmetic_service('multiply', a, b);
+		return this.use_arithmetic_service('multiply', a, b);
 
 		//coward's way out
-		return a*b;
+		//return a*b;
 	}
 
 	divide(a, b) {
 		//level up
-		//this.use_arithmetic_service('divide', a, b);
+		return this.use_arithmetic_service('divide', a, b);
 
 		//coward's way out
-		return a/b;
+		//return a/b;
 	}
+
+	//TODO: use something like swagger to document the api
 
 	/*
 	 * post to the arithmetic service to determine the result of performing the operator to a and b
 	 * @param a the first operand
 	 * @param b the second operand
 	 */
-	use_arithmetic_service(operator, a, b) {
-		console.log('arithmetic_service');
-		var operands = {a:a, b:b};
+	use_arithmetic_service(operation, a, b) {
+		return Promise.resolve()
+			.then( () => {
+				var operands = {a:a, b:b};
 
-		this.httpClient
-			.fetch(operator, {
-					method: 'post', body: json(operands)
-							})
-			.then(
-				response => {
-					response.json()
-						.then(result => {
-							console.log(result.result);
-						})
-				})
-			.catch(error => {
-						console.log(error);
-					});
+				var promise = this.httpClient.fetch(operation, {	method: 'post', body: json(operands) });
+				return promise;
+			})
+			.then( response => {
+														return response.json()
+															.then( result => { return result.result; } );
+											 	 });
 	}
 
 	handle_token(element) {
-		let initialValue = $(".screen").val()//
+		let initialValue = $(".screen").val();
 		let newValue = initialValue.concat(element.value);
 
 		//TODO: add incremental validation of equations
-		//      may involve building a parser - cant' find a tool to do it yet
 
 		$(".screen").val(newValue);
 	}
@@ -107,24 +98,24 @@ export class Calculator {
 
 	handle_evaluate(element) {
 		let expression = $(".screen").val();
+
+		console.log('handle_evaluate: expression => ', expression);
+
 		try {
 			//could do this to use a service for calculation
 			let root = math.parse(expression);
 
-			//level up
-			//this.recursive_evaluate(root, (result) => { $(".screen").val(result); });
+			let result = this.recursive_evaluate(root)
+												.then( result => {
+													$(".screen").val(result);
+												});
 
-			//coward's way out
-			let result = this.recursive_evaluate(root);
-			$(".screen").val(result);
-
-			//or we can do this the easy way
+			//the really easy way
 			//$(".screen").val(math.eval(expression));
 		} catch(e) {
 			//TODO: handle error in a user visible way
 			console.log(e);
 		}
-
 	}
 
 	recursive_evaluate(node) {
@@ -133,26 +124,42 @@ export class Calculator {
 			return node.value;
 		} else if(node.type.localeCompare("OperatorNode")==0) {//TODO: use instanceof instead
 
-			var promise;
-			var a = this.recursive_evaluate(node.args[0]);
-			var b = this.recursive_evaluate(node.args[1]);
+			var promise = Promise.resolve().then( () => {
+																				let a = this.recursive_evaluate(node.args[0]);
+																				console.log('a => ', a);
+																				return a;
+																			})
+																		 .then( a => {
+																			 	let b = this.recursive_evaluate(node.args[1]);
+																				console.log('b => ', b);
+																				let result = {a:a, b:b}
+																				console.log('result => ', result);
+																				return result;
+																			})
+																		 .then( operands => {
+																			 	 console.log('operands => ', operands);
 
-			switch(node.op) {
-				case '*':
-					return this.multiply(a,b);
-					break;
-				case '/':
-					return this.divide(a, b);
-					break;
-				case '+':
-					return this.add(a, b);
-					break;
-				case '-':
-					return this.subtract(a,b);
-					break;
-				default:
-					throw("Unexpected operator");
-			}
+																				 let a = operands.a;
+																				 let b = operands.b;
+
+																				 switch(node.op) {
+																	 				case '*':
+																						return this.use_arithmetic_service('multiply', a, b);
+																	 					break;
+																	 				case '/':
+																	 					return this.use_arithmetic_service('divide', a, b);
+																	 					break;
+																	 				case '+':
+																						return this.use_arithmetic_service('add', a, b);
+																	 					break;
+																	 				case '-':
+																	 					return this.use_arithmetic_service('subtract', a, b);
+																	 					break;
+																	 				default:
+																	 					throw("Unexpected operator");
+																	 			}
+																			});
+			return promise;
 		} else {
 			throw("unexpected node type");
 		}
