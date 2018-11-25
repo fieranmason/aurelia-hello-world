@@ -30,37 +30,37 @@ export class Calculator {
   			});
 	}
 
-	add(a, b) {
+	//add(a, b) {
 		//level up
-		return this.use_arithmetic_service('add', a, b);
+	//	return this.use_arithmetic_service('add', a, b);
 
 		//coward's way out
 		//return a + b;
-	}
+	//}
 
-	subtract(a, b) {
+	//subtract(a, b) {
 		//level up
-		return this.use_arithmetic_service('subtract', a, b);
+	//	return this.use_arithmetic_service('subtract', a, b);
 
 		//coward's way out
 		//return a-b;
-	}
+	//}
 
-	multiply(a, b) {
+	//multiply(a, b) {
 		//level up
-		return this.use_arithmetic_service('multiply', a, b);
+	//	return this.use_arithmetic_service('multiply', a, b);
 
 		//coward's way out
 		//return a*b;
-	}
+	//}
 
-	divide(a, b) {
+	//divide(a, b) {
 		//level up
-		return this.use_arithmetic_service('divide', a, b);
+	//	return this.use_arithmetic_service('divide', a, b);
 
 		//coward's way out
 		//return a/b;
-	}
+	//}
 
 	//TODO: use something like swagger to document the api
 
@@ -73,13 +73,14 @@ export class Calculator {
 		return Promise.resolve()
 			.then( () => {
 				var operands = {a:a, b:b};
-
 				var promise = this.httpClient.fetch(operation, {	method: 'post', body: json(operands) });
 				return promise;
 			})
 			.then( response => {
 														return response.json()
-															.then( result => { return result.result; } );
+															.then( result => {
+																return result.result;
+															});
 											 	 });
 	}
 
@@ -98,8 +99,6 @@ export class Calculator {
 
 	handle_evaluate(element) {
 		let expression = $(".screen").val();
-
-		console.log('handle_evaluate: expression => ', expression);
 
 		try {
 			//could do this to use a service for calculation
@@ -124,42 +123,35 @@ export class Calculator {
 			return node.value;
 		} else if(node.type.localeCompare("OperatorNode")==0) {//TODO: use instanceof instead
 
-			var promise = Promise.resolve().then( () => {
-																				let a = this.recursive_evaluate(node.args[0]);
-																				console.log('a => ', a);
-																				return a;
-																			})
-																		 .then( a => {
-																			 	let b = this.recursive_evaluate(node.args[1]);
-																				console.log('b => ', b);
-																				let result = {a:a, b:b}
-																				console.log('result => ', result);
-																				return result;
-																			})
-																		 .then( operands => {
-																			 	 console.log('operands => ', operands);
+			let a = this.recursive_evaluate(node.args[0]);
+		  let b = this.recursive_evaluate(node.args[1]);
 
-																				 let a = operands.a;
-																				 let b = operands.b;
+			return Promise.all([a, b])
+				.then( (result) => {
+					let a = result[0];
+					let b = result[1];
 
-																				 switch(node.op) {
-																	 				case '*':
-																						return this.use_arithmetic_service('multiply', a, b);
-																	 					break;
-																	 				case '/':
-																	 					return this.use_arithmetic_service('divide', a, b);
-																	 					break;
-																	 				case '+':
-																						return this.use_arithmetic_service('add', a, b);
-																	 					break;
-																	 				case '-':
-																	 					return this.use_arithmetic_service('subtract', a, b);
-																	 					break;
-																	 				default:
-																	 					throw("Unexpected operator");
-																	 			}
-																			});
-			return promise;
+					console.log('a => ', a);
+					console.log('b => ', b);
+					console.log('op => ', node.op);
+
+					switch(node.op) {
+					 case '*':
+						 return this.use_arithmetic_service('multiply', a, b);
+						 break;
+					 case '/':
+						 return this.use_arithmetic_service('divide', a, b);
+						 break;
+					 case '+':
+						 return this.use_arithmetic_service('add', a, b);
+						 break;
+					 case '-':
+						 return this.use_arithmetic_service('subtract', a, b);
+						 break;
+					 default:
+						 throw("Unexpected operator");
+				 }
+			 });
 		} else {
 			throw("unexpected node type");
 		}
